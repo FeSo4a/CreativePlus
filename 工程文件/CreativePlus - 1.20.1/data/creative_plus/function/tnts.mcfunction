@@ -12,7 +12,7 @@ scoreboard players set @a[scores={gamerule_tnts=1..}] gamerule_tnts 0
 # 将tnt和矿车变成苦力怕
 execute if score "准则" gamerule_tnts matches 1.. as @e[type=minecraft:tnt,nbt={fuse:1s}] at @a run summon minecraft:creeper ~ ~ ~ {Fuse:1,ExplosionRadius:0,ignited:true}
 execute if score "准则" gamerule_tnts matches 1.. as @e[type=minecraft:tnt,nbt={fuse:1s}] run kill @s
-execute if score "准则" gamerule_tnts matches 1.. as @e[type=minecraft:tnt_minecart,nbt={fuse:1}] at @a run summon minecraft:creeper ~ ~ ~ {Fuse:1,ExplosionRadius:0,ignited:true}
-execute if score "准则" gamerule_tnts matches 1.. as @e[type=minecraft:tnt_minecart,nbt={fuse:1}] run kill @s
+execute if score "准则" gamerule_tnts matches 1.. as @e[type=minecraft:tnt_minecart,nbt={TNTFuse:1}] at @a run summon minecraft:creeper ~ ~ ~ {Fuse:1,ExplosionRadius:0,ignited:true}
+execute if score "准则" gamerule_tnts matches 1.. as @e[type=minecraft:tnt_minecart,nbt={TNTFuse:1}] run kill @s
 # 清除末地水晶
 execute if score "准则" gamerule_tnts matches 1.. run kill @e[type=minecraft:end_crystal]
