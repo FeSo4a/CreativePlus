@@ -29,7 +29,7 @@ tellraw @a[scores={creative_help=1..}] {"text":"原版指令：","color":"red"}
 tellraw @a[scores={creative_help=1..}] {"text":"/gamerule mobGriefing true/false -> 打开/关闭生物破坏","color":"red"}
 tellraw @a[scores={creative_help=1..}] {"text":"/gamerule doFireTick true/false -> 打开/关闭火焰蔓延","color":"red"}
 tellraw @a[scores={creative_help=1..}] {"text":"/tag <玩家名> add/remove creative_op -> 给予/撤销玩家管理员","color":"red"}
-tellraw @a[scores={creative_help=1..}] {"text":"/tag <玩家名> add creative_ban -> 封禁玩家，若玩家已经被封禁则解封","color":"red"}
+tellraw @a[scores={creative_help=1..}] {"text":"/tag <玩家名> add/remove in_banlist -> 封禁/解除封禁","color":"red"}
 tellraw @a[scores={creative_help=1..}] {"text":"/function creative_plus:reset 将所有参数都设为1（初次使用请手动输入重置）","color":"red"}
 
 tellraw @a[scores={creative_help=1..}] {"text":"小贴士：输入命令时按下Tab键可以自动补全命令参数","color":"blue"}

@@ -4,3 +4,7 @@ function creative_plus:respawns
 function creative_plus:tnts
 function creative_plus:clear
 function creative_plus:help
+function creative_plus:spawn_eggs
+function creative_plus:nbt_tags
+function creative_plus:night_vision
+function creative_plus:ban

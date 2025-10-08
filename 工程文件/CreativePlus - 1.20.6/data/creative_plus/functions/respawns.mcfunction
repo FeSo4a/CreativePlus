@@ -13,14 +13,12 @@ scoreboard players set @a[scores={gamerule_beds=1..}] gamerule_beds 0
 execute as @a[nbt={Dimension:"minecraft:overworld"}] run tag @s add overworld
 execute as @a[nbt={Dimension:"minecraft:the_nether"}] run tag @s add the_nether
 execute as @a[nbt={Dimension:"minecraft:the_end"}] run tag @s add the_end
-# T显
-execute if score "准则" gamerule_beds matches 1.. run tellraw @a[tag=overworld,nbt={Inventory:{id:"minecraft:respawn_anchor"}}] {"text":"你不能在这个维度使用这个物品！","color":"dark_red"}
-execute if score "准则" gamerule_beds matches 1.. run tellraw @a[tag=the_end,nbt={Inventory:{id:"minecraft:respawn_anchor"}}] {"text":"你不能在这个维度使用这个物品！","color":"dark_red"}
+
 # 删除物品
-execute if score "准则" gamerule_beds matches 1.. run clear @a[tag=overworld] minecraft:respawn_anchor
-execute if score "准则" gamerule_beds matches 1.. run clear @a[tag=the_nether] #minecraft:beds
-execute if score "准则" gamerule_beds matches 1.. run clear @a[tag=the_end] minecraft:respawn_anchor
-execute if score "准则" gamerule_beds matches 1.. run clear @a[tag=the_end] #minecraft:beds
+execute if score "准则" gamerule_beds matches 1.. run clear @a[tag=overworld,tag=!creative_op] minecraft:respawn_anchor
+execute if score "准则" gamerule_beds matches 1.. run clear @a[tag=the_nether,tag=!creative_op] #minecraft:beds
+execute if score "准则" gamerule_beds matches 1.. run clear @a[tag=the_end,tag=!creative_op] minecraft:respawn_anchor
+execute if score "准则" gamerule_beds matches 1.. run clear @a[tag=the_end,tag=!creative_op] #minecraft:beds
 # 重置标签
 tag @a remove overworld
 tag @a remove the_nether
